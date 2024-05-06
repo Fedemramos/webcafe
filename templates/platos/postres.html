@@ -1,0 +1,22 @@
+{% extends "./comidas.html" %}
+{% load static %}
+
+{% block body_content %}
+
+<section>
+    <h1 class="text-center font-bold text-3xl mt-8">Postres | Alfajores</h1>
+    <hr class="my-12 border-t-4 border-orange-600 mx-36 md:mx-36">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto max-w-7xl px-10">
+        {% for postre in postres %}
+        <div class="border border-black rounded-lg shadow-md ">
+            <h5 class="px-4 py-2 text-white font-semibold text-3xl text-center">{{ postre.nombre }}</h5>
+            <div class="p-4  font-semibold text-xl" >
+                <p class="text-black">{{ postre.descripcion }}</p>
+                <p class="text-black mt-4 text-right">Precio: ${{ postre.precio }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}

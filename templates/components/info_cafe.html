@@ -1,0 +1,67 @@
+{% load static %}
+{% block info_cafe %}
+
+<br>
+<hr id="nosotros" class="my-6 border-t-4 border-orange-300 mx-24">
+<div class="bg-white py-10 md:py-20">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Un lugar DISTINTO</h2>
+                <p class="text-lg md:text-xl text-gray-700 text-center mx-6">Bienvenidos a Don JOTA. Donde ofrecemos una experiencia diferente. Ya sea para un almuerzo o cena de negocios, celebrando una ocasión especial o buscando un ambiente distinto para reuniones, nuestro menú ofrece algo para todos.</p>
+            </div>
+            <div>
+                <img src="{% static 'image/cafe_dos.jpg' %}" alt="Foto de Don JOTA" class="w-full rounded-lg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-primary-500 py-12 md:py-16 lg:py-20">
+    <div class="container mx-auto px-4">
+        <h2 class="text-black text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">En Don JOTA te ofrecemos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="w-full h-64 object-cover rounded-t-lg" src="{% static 'image/portada1.jpg' %}" alt="Vista">
+                </a>
+                <div class="p-4 md:p-6 lg:p-8">
+                    <a href="#" class="block mb-2 text-2xl md:text-2xl font-bold text-black dark:text-white hover:underline">Vista</a>
+                    <p class="mb-4 text-gray-700 dark:text-gray-400">Contamos con un espacio exterior único y panorámico.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="w-full h-64 object-cover rounded-t-lg" src="{% static 'image/portada2.jpg' %}" alt="Take Away">
+                </a>
+                <div class="p-4 md:p-6 lg:p-8">
+                    <a href="#" class="block mb-2 text-2xl md:text-2xl font-bold text-black dark:text-white hover:underline">Take Away</a>
+                    <p class="mb-4 text-gray-700 dark:text-gray-400">También podés venir y llevarte tu café.</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="w-full h-64 object-cover rounded-t-lg" src="{% static 'image/portada3.jpg' %}" alt="Postre de Balcarce">
+                </a>
+                <div class="p-4 md:p-6 lg:p-8">
+                    <a href="#" class="block mb-2 text-2xl md:text-2xl font-bold text-black dark:text-white hover:underline">Postre de Balcarce</a>
+                    <p class="mb-4 text-gray-700 dark:text-gray-400">Vení a probar nuestro postre de Balcarce o pedilo para llevar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="bg-cover bg-no-repeat bg-center" style="background-image: url('{% static 'image/fondodonjota.jpg' %}');">
+    <div class="px-12 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Hecha un vistazo en nuestra galeria de fotos</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-24 lg:px-56">Conoce mas sobre nosotros y quedate enamorado de este lugar.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <a href="{% url 'gallery'%}" class="bg-orange-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg inline-block">GALERIA</a>
+            
+        </div>
+    </div>
+</section>
+
+{% endblock info_cafe %}

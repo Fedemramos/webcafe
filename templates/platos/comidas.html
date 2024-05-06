@@ -1,0 +1,56 @@
+{% extends "../base.html" %}
+{% load static %}
+
+{% block content %}
+
+<nav class="bg-white dark:bg-gray-700">
+    <hr id="nosotros" class="border-t-2 border-orange-300 mx-24 pb-5">
+    <div class="max-w-screen-xl px-4 py-3 mx-auto">
+        <div class="flex items-center justify-between">
+            <a href="#" class="text-gray-900 dark:text-white text-2xl font-bold">MENU</a>
+            
+            <ul class="hidden lg:flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-xl">
+                <li>
+                    <a href="{% url 'almuerzo' %}" class="text-gray-900 dark:text-white hover:underline">Almuerzo</a>
+                </li>
+                <li>
+                    <a href="{% url 'desayuno' %}" class="text-gray-900 dark:text-white hover:underline">Desayuno</a>
+                </li>
+                <li>
+                    <a href="{% url 'bebidas' %}" class="text-gray-900 dark:text-white hover:underline">Bebidas</a>
+                </li>
+                <li>
+                    <a href="{% url 'cafeteria' %}" class="text-gray-900 dark:text-white hover:underline">Cafetería</a>
+                </li>
+                <li>
+                    <a href="{% url 'ensalada' %}" class="text-gray-900 dark:text-white hover:underline">Ensalada</a>
+                </li>
+                <li>
+                    <a href="{% url 'postres' %}" class="text-gray-900 dark:text-white hover:underline">Postres</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="lg:hidden mt-4">
+        <div class="grid grid-cols-2 gap-4 pb-8 font-semibold text-xl text-center">
+            <a href="{% url 'almuerzo' %}" class="block text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-lg">Almuerzo</a>
+            <a href="{% url 'desayuno' %}" class="block text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-lg">Desayuno</a>
+            <a href="{% url 'bebidas' %}" class="block text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-lg">Bebidas</a>
+            <a href="{% url 'cafeteria' %}" class="block text-gray8300 hover:bg-gray-100 px-3 py-2 rounded-lg">Cafetería</a>
+            <a href="{% url 'ensalada' %}" class="block text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-lg">Ensalada</a>
+            <a href="{% url 'postres' %}" class="block text-gray-800 hover:bg-gray-100 px-3 py-2 rounded-lg">Postres</a>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <section class="bg-cover bg-center bg-no-repeat py-16 md:py-16" style="background-image: url('{% static "image/bgg.png" %}')">
+      {% block body_content %}
+      {% endblock %}
+    </section>
+</body>
+{% endblock %}
+
+
+  
